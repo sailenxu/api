@@ -12,6 +12,7 @@ import org.apache.http.util.EntityUtils;
 @SuppressWarnings("deprecation")
 public class response {
 	String xlspath="C:\\Users\\xusaisai\\Desktop\\7fresh-api.xlsx";
+	String xlspath="C:\\Users\\xusaisai\\Desktop\\work\\7fresh\\7fresh-api.xlsx";
 	String ip="http://mwpgwb.m.jd.com";
 	String path="/mwp/mobileDispatch";
 
