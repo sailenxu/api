@@ -11,7 +11,6 @@ import org.apache.http.util.EntityUtils;
 
 @SuppressWarnings("deprecation")
 public class response {
-	String xlspath="C:\\Users\\xusaisai\\Desktop\\7fresh-api.xlsx";
 	String xlspath="C:\\Users\\xusaisai\\Desktop\\work\\7fresh\\7fresh-api.xlsx";
 	String ip="http://mwpgwb.m.jd.com";
 	String path="/mwp/mobileDispatch";
@@ -26,6 +25,7 @@ public class response {
 //		String parameters="api=7fresh.seckill.query&appName=7fresh&uuid=23sdafadf00000&brand=º£¶û&upc=120000&storeId=131215&pin=dzx123&data.seckillId=2017101710&data.page=2&data.pageSize=20";
 //		String parameters2="api=7fresh.ware.hasPromotionWares&client=android&appName=7fresh&uuid=23sdafadf&data={\"storeId\":131215,\"promotionId\":4524,\"page\":1,\"pagesize\":10}";
 		response r=new response();
+		System.out.println(r.getURL());
 		apiTool apitool=new apiTool(r.getURL());
 		System.out.println(apitool.getJson());
 		
