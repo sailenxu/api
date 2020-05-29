@@ -10,17 +10,12 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
 public class apiTool {
-	private String strurl;
-	public apiTool(String strurl) {
-		// TODO Auto-generated constructor stub
-		this.strurl= strurl;
-	}
 	/***
 	 * 从接口获取json
 	 * @return
 	 * @throws Exception 
 	 */
-	public String getJson() throws Exception{
+	public String getJson(String strurl) throws Exception{
 		String json="";
 		//采用rui的方式，防止使用string由于编码格式报错
 		URL url=new URL(strurl);

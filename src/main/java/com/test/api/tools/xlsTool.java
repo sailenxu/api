@@ -44,7 +44,7 @@ public class xlsTool {
 			return cells;
 		}
 //		System.out.println(hsheet.getLastRowNum());//从0开始
-		for (int hang = 1; hang <= hsheet.getLastRowNum(); hang++) {
+		for (int hang = 0; hang <= hsheet.getLastRowNum(); hang++) {
 			XSSFRow hrow=hsheet.getRow(hang);
 			XSSFCell xcell=hrow.getCell((short)lie);
 			xcell.setCellType(CellType.STRING);//防止读取数字时自动添加小数

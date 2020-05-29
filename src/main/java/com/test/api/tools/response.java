@@ -11,9 +11,9 @@ import org.apache.http.util.EntityUtils;
 
 @SuppressWarnings("deprecation")
 public class response {
-	String xlspath="C:\\Users\\xusaisai\\Desktop\\work\\7fresh\\7fresh-api.xlsx";
-	String ip="http://mwpgwb.m.jd.com";
-	String path="/mwp/mobileDispatch";
+	String xlspath="apicase.xlsx";
+	String ip="http://www.kuaidi100.com";
+	String path="/query";
 
 	/**
 	 * @param args
@@ -21,15 +21,10 @@ public class response {
 	 */
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
-		
-//		String parameters="api=7fresh.seckill.query&appName=7fresh&uuid=23sdafadf00000&brand=海尔&upc=120000&storeId=131215&pin=dzx123&data.seckillId=2017101710&data.page=2&data.pageSize=20";
-//		String parameters2="api=7fresh.ware.hasPromotionWares&client=android&appName=7fresh&uuid=23sdafadf&data={\"storeId\":131215,\"promotionId\":4524,\"page\":1,\"pagesize\":10}";
 		response r=new response();
 		System.out.println(r.getURL());
-		apiTool apitool=new apiTool(r.getURL());
-		System.out.println(apitool.getJson());
-		
-		
+		apiTool apitool=new apiTool();
+		System.out.println(apitool.getJson(r.getURL()));
 	}
 	/***
 	 * 生成url中的参数（键值对）
@@ -46,11 +41,9 @@ public class response {
 		}
 		urlPram=urlPram+cells1.get(cells1.size()-1)+"="+cells2.get(cells2.size()-1);
 		return urlPram;
-		
 	}
 	/***
 	 * 生成完整url
-	 * @param ip
 	 * @return
 	 * @throws Exception
 	 */
