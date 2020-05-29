@@ -10,6 +10,7 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.poifs.filesystem.POIFSFileSystem;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -33,7 +34,6 @@ public class xlsTool {
 	}
 	/***
 	 * 获取指定sheet的指定列的所有cell
-	 * @param sheet 指定sheet,从0开始
 	 * @param lie 指定列，从0开始
 	 * @return
 	 */
@@ -47,7 +47,7 @@ public class xlsTool {
 		for (int hang = 1; hang <= hsheet.getLastRowNum(); hang++) {
 			XSSFRow hrow=hsheet.getRow(hang);
 			XSSFCell xcell=hrow.getCell((short)lie);
-			xcell.setCellType(xcell.CELL_TYPE_STRING);//防止读取数字时自动添加小数
+			xcell.setCellType(CellType.STRING);//防止读取数字时自动添加小数
 			if (xcell==null) {
 				continue;
 			}
